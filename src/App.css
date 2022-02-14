@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.header {
+  height: 75px;
+  width: 100%;
+  background: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+}
+
+.logo {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 35px;
+}
+
+.navlist {
+  list-style: none;
+  height: 100%;
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navlist li {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.navlist li:hover {
+  background: rgb(97, 97, 97);
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 75px);
+  font-size: 50px;
+}
