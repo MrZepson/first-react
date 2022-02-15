@@ -1,6 +1,8 @@
 import Cards from "./Cards";
 
 const Services = () => {
+  // Just a temporary object with card information for now,
+  // later I'll fetch data from an API and use that.
   let cardInfo = [
     {
       title: "Card 1",
