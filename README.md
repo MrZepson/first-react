@@ -1,4 +1,6 @@
-# A place where i throw all my react knowledge
+# my-first-react
+
+#### A place where I throw all my React knowledge!
 
 ### Installation
 
