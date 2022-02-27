@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Header = () => {
+  const [openNav, setOpenNav] = useState(false);
+
   const listStyle = {
     color: "white",
     textDecoration: "none",
@@ -8,10 +11,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <Link to="/" style={listStyle}>
+      <Link className="logo-link" to="/" style={listStyle}>
         <h1 className="logo">Logo</h1>
       </Link>
-      <ul className="navlist">
+      <div className="burger-container">
+        <div className="burger" onClick={() => setOpenNav(!openNav)}>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+          <div className="burger-line"></div>
+        </div>
+      </div>
+      <ul className={openNav ? "navlist open" : "navlist"}>
         <Link to="/services" style={listStyle}>
           <li>Services</li>
         </Link>

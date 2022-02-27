@@ -10,6 +10,7 @@ body {
   min-height: 100vh;
   width: 100%;
   font-family: sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
@@ -17,15 +18,23 @@ body {
   width: 100%;
   background: gray;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   position: fixed;
 }
 
 .logo {
-  padding: 15px;
+  height: 100%;
   cursor: pointer;
   font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-link {
+  height: 100%;
+  width: 60%;
 }
 
 .navlist {
@@ -49,6 +58,40 @@ body {
 
 .navlist li:hover {
   background: rgb(97, 97, 97);
+}
+
+@media screen and (max-width: 800px) {
+  .navlist {
+    position: absolute;
+    top: 75px;
+    right: -66%;
+    height: calc(100vh - 75px);
+    width: 66%;
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in;
+  }
+  .navlist.open {
+    right: 0;
+  }
+  .burger {
+    cursor: pointer;
+  }
+  .burger-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+  }
+  .burger-line {
+    height: 3px;
+    width: 30px;
+    margin: 5px;
+    background-color: white;
+    border-radius: 2px;
+  }
 }
 
 .section {
