@@ -32,6 +32,10 @@ const Services = () => {
       title: "Future update",
       content: "Button to create new card",
     },
+    {
+      title: "Charmander",
+      content: "Fire",
+    },
   ];
 
   return (
