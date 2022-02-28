@@ -22,13 +22,25 @@ const Header = () => {
         </div>
       </div>
       <ul className={openNav ? "navlist open" : "navlist"}>
-        <Link to="/services" style={listStyle}>
+        <Link
+          to="/services"
+          style={listStyle}
+          onClick={() => setOpenNav(!openNav)}
+        >
           <li>Services</li>
         </Link>
-        <Link to="/about" style={listStyle}>
+        <Link
+          to="/about"
+          style={listStyle}
+          onClick={() => setOpenNav(!openNav)}
+        >
           <li>About us</li>
         </Link>
-        <Link to="/login" style={listStyle}>
+        <Link
+          to="/login"
+          style={listStyle}
+          onClick={() => setOpenNav(!openNav)}
+        >
           <li>Log in</li>
         </Link>
       </ul>
